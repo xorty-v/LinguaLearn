@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 20px 10px;
+
+    color: #3e3e3e;
+    font: 18px Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+}
+
+h1 {
+    margin-bottom: 25px;
+
+    font-size: 28px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    position: relative;
+    width: 300px;
+    margin: 0 auto 10px;
+    text-align: center;
+}
+
+div::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: 50%/cover no-repeat;
+}
+
+.correct::before {
+    background-image: url(./img/correct.svg);
+}
+
+.incorrect::before {
+    background-image: url(./img/incorrect.svg);
+}
+
+i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+}
+
+img {
+    padding: 20px;
+    max-height: 150px;
+
+    border: 1px solid #6868f8;
+    border-radius: 4px;
+    background: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+}
+
+b {
+    display: block;
+    margin-top: 10px;
+
+    color: #6868f8;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+input {
+    display: block;
+    width: 250px;
+    padding: 8px;
+
+    border: 1px solid #6868f8;
+    border-radius: 4px;
+    outline: none;
+    color: #6868f8;
+    font: 700 20px Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+input:focus {
+    border-color: #1e1ef8;
+}
+
+.btn {
+    display: block;
+    width: 250px;
+    margin-top: 15px;
+    padding: 10px;
+
+    border-radius: 4px;
+    color: #fafafa;
+    font: 700 18px Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    background-color: #6868f8;
+    transition: background-color .4s;
+}
+
+.btn:hover {
+    background-color: #4646ec;
+}
+
+/* other */
+
+.speak {
+    margin-top: 100px;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.wrap {
+    position: relative;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.swiper-slide b {
+    display: block;
+    margin: 5px 0;
+    color: #6868f8;
+    font-size: 32px;
+}
+
+.swiper-slide i {
+    position: unset;
+}
+
+.speech-btn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background: url(img/sound.svg) 50%/75% no-repeat;
+
+    z-index: 2;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    left: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #6868f8 url(img/arrow.svg) 50%/50% no-repeat;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next {
+    left: auto;
+    right: 0;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+}
